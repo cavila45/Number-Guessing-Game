@@ -8,11 +8,19 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         int guess;
-        int attempts;
+        int attempts = 0;
         int randomNumber = random.nextInt(1, 11);
 
 
-        System.out.println(randomNumber);
-        //Number Guessing Game
+        System.out.println("Number Guessing Game");
+        System.out.println("Guess a number between 1-10: ");
+
+        do{
+            System.out.print("Enter a guess: ");
+            guess = scanner.nextInt();
+            attempts++;
+        }while(guess != randomNumber);
+
+        System.out.println("You have won");
     }
 }
